@@ -15,4 +15,4 @@ My first big project, it was greatly overscoped.
 
 <b>FULL PAGE COMING SOON</b>
 
-<a href="https://blucherrigames.itch.io/orange-ball">Download now</a>
+<a href="https://blucherrigames.itch.io/orange-ball" target="_blank">Download now</a>
