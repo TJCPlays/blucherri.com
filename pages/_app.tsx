@@ -4,12 +4,12 @@ import Head from "next/head";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import React from "react";
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps, ...appProps }: AppProps) {
   const isEmbed = appProps.router.pathname.includes("/embed");
-  const NavbarComponent = isEmbed ? React.Fragment : Navbar;
+  const NavbarComponent = isEmbed ? React.Fragment : Layout;
 
   return (
     <>
