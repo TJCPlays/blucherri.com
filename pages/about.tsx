@@ -33,7 +33,7 @@ export default function About({
   return (
     <div className="text-gray-500 dark:text-gray-400 text-center">
       <div className="py-2">
-        <h1 className="text-[#dcdfe7] underline text-3xl lg:text-4xl font-bold pb-5">
+        <h1 className="dark:text-[#dcdfe7] text-gray-500 underline text-3xl lg:text-4xl font-bold pb-5">
           About us
         </h1>
         <p>
