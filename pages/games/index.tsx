@@ -29,7 +29,7 @@ export default function GamesPage({
       {games.map(({ slug, frontmatter }) => (
         <div
           key={slug}
-          className="border border-gray-200 dark:border-gray-800 m-2 rounded-2xl shadow-lg overflow-hidden flex flex-col"
+          className="border border-gray-200 dark:border-gray-800 m-2 rounded-2xl shadow-lg overflow-hidden flex flex-col text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white font-bold"
         >
           <Link href={`/games/${slug}`}>
             <a>
@@ -39,7 +39,7 @@ export default function GamesPage({
                 alt={frontmatter.title}
                 src={`/${frontmatter.socialImage}`}
               />
-              <h1 className="p-4">{frontmatter.title}</h1>
+              <h1 className="p-4 ">{frontmatter.title}</h1>
             </a>
           </Link>
         </div>
