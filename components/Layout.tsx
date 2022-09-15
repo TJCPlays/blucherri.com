@@ -2,7 +2,6 @@ import { faHouse, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import NavBarItem from "./NavBarItem";
-import NavBarItemExternal from "./NavBarItemExternal";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,15 +11,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <ul className="flex flex-row lg:[display:initial;] lg:[flex-direction:unset;] mb-2 justify-around">
             <NavBarItem name="Home" link="/" icon={faHouse} />
             <NavBarItem name="Games" link="/games" icon={faGamepad} />
-            <NavBarItemExternal
+            <NavBarItem
               name="Discord"
               link="https://discord.gg/hX7aQ5WsyY"
               icon={faDiscord}
+              external
             />
-            <NavBarItemExternal
+            <NavBarItem
               name="Twitter"
               link="https://twitter.com/cherri_blu"
               icon={faTwitter}
+              external
             />
           </ul>
         </div>

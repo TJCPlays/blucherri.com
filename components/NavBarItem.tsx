@@ -6,16 +6,20 @@ export default function NavBarItem({
   name,
   icon,
   link,
+  external,
 }: {
   name: string;
   icon: IconDefinition;
   link: string;
+  external?: boolean;
 }) {
+  const target = external ? "_blank" : undefined;
+  
   return (
     <>
       <li>
-        <Link href={link}>
-          <a className="flex items-center p-2 text-3xl font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+        <Link href={link} passHref={external}>
+          <a target={target} className="flex items-center p-2 text-3xl font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
             <FontAwesomeIcon
               icon={icon}
               className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
