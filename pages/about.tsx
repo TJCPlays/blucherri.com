@@ -46,21 +46,18 @@ export default function About({
         <h3 className="text-2xl underline lg:text-3xl">Meet the team</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
           {people.map(({ slug, frontmatter, htmlContent }) => (
-            <Link href={`/person/${slug}`}>
-            <div
-              key={slug}
-              className="border border-gray-200 dark:border-gray-800 m-2 rounded-2xl shadow-lg overflow-hidden flex flex-col text-gray-500 duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-start hover:-translate-y-3 transition-transform hover:cursor-pointer"
-            >
-              <CustomImage
-                width={240}
-                height={240}
-                layout="responsive"
-                alt={frontmatter.name}
-                src={`/${frontmatter.pfp}`}
-              />
-              <h1 className="p-4 pb-2 font-bold">{frontmatter.name}</h1>
-              <p className="p-4 pt-0">{frontmatter.role}</p>
-            </div>
+            <Link href={`/person/${slug}`} key={slug}>
+              <div className="border border-gray-200 dark:border-gray-800 m-2 rounded-2xl shadow-lg overflow-hidden flex flex-col text-gray-500 duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-start hover:-translate-y-3 transition-transform hover:cursor-pointer">
+                <CustomImage
+                  width={240}
+                  height={240}
+                  layout="responsive"
+                  alt={frontmatter.name}
+                  src={`/${frontmatter.pfp}`}
+                />
+                <h1 className="p-4 pb-2 font-bold">{frontmatter.name}</h1>
+                <p className="p-4 pt-0">{frontmatter.role}</p>
+              </div>
             </Link>
           ))}
         </div>
